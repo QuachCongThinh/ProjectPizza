@@ -1,0 +1,168 @@
+.navbar {
+  .container-navbar {
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .leftSide {
+      img {
+        max-width: 100%;
+        width: 100px;
+        height: auto;
+      }
+    }
+    .centerSide {
+      font-family: var(--font-1);
+      .menu {
+        font-size: 15px;
+        display: flex;
+        color: #000;
+        list-style: none;
+        .list-menu {
+          position: relative;
+          padding: 30px 20px;
+          a {
+            position: relative;
+            font-weight: 600;
+            color: #1d2228;
+            text-decoration: none;
+            transition: 0.3s;
+            &:hover {
+              color: #ed4e53;
+            }
+          }
+        }
+        li:hover .child-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0px);
+        }
+        .arrow {
+          &::after {
+            content: "\f105";
+            font-family: "FontAwesome";
+            position: absolute;
+            right: 0;
+            margin-right: 20px;
+            font-size: 12px;
+          }
+        }
+        .child-menu {
+          margin-top: 30px;
+          border-radius: 8px;
+          min-width: 250px;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          background-color: #fff;
+          display: block;
+          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+          z-index: 999;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.4s;
+          transform: translateY(10px);
+          .list-child-menu {
+            list-style: none;
+            a {
+              padding: 10px 20px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              display: block;
+              font-weight: 400;
+              font-size: 14px;
+            }
+            &:last-child {
+              border-bottom: 3px solid #41464b;
+              border-radius: 0 0 8px 8px;
+            }
+          }
+          li:hover .sub-menu {
+            opacity: 1;
+            visibility: visible;
+          }
+          .sub-menu {
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            min-width: 250px;
+            top: 0;
+            left: 250px;
+            background: #fff;
+            border-radius: 8px;
+            position: absolute;
+            transition: all 0.3s ease;
+            opacity: 0;
+            display: block;
+            visibility: hidden;
+            list-style: none;
+            .list-sub-menu {
+              a {
+                padding: 10px 20px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                font-weight: 400;
+                display: block;
+                font-size: 14px;
+              }
+              &:last-child {
+                border-bottom: 3px solid #1d2228;
+                border-radius: 0 0 8px 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .rightSide {
+      display: flex;
+      .icon-cart {
+        padding: 0 30px;
+        cursor: pointer;
+        position: relative;
+        transition: 0.3s;
+        .flaticon-shopping-bag {
+          &::before {
+            content: "\f112";
+            font-family: "Flaticon";
+            font-style: normal;
+          }
+          font-size: 24px;
+        }
+        &:hover {
+          color: #ed4e53;
+        }
+        .cart-item-count {
+          position: absolute;
+          background-color: #5c5e5f;
+          width: 20px;
+          height: 20px;
+          top: -12px;
+          left: 42px;
+          border-radius: 50%;
+          p {
+            color: #fff;
+            text-align: center;
+            top: -4px;
+            left: 6px;
+            font-size: 13px;
+            font-family: var(--font-1);
+            position: absolute;
+          }
+        }
+      }
+      .icon-search {
+        cursor: pointer;
+        transition: 0.3s;
+        .flaticon-search {
+          font-size: 24px;
+          &::before {
+            content: "\f11f";
+            font-family: "Flaticon";
+            font-style: normal;
+          }
+        }
+        &:hover {
+          color: #ed4e53;
+        }
+      }
+    }
+  }
+}

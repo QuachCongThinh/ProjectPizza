@@ -1,0 +1,137 @@
+@import "../../style/all.scss";
+
+.section-customer {
+  position: relative;
+  margin-bottom: 80px;
+  .container {
+    margin: auto;
+    max-width: 1140px;
+    .slick-arrow {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid #f9f9f9;
+      color: #1d2228;
+      background-color: #f9f9f9;
+      transition: 0.3s;
+      z-index: 1;
+      overflow: hidden;
+      &:hover {
+        background-color: #fccc4c;
+        border-color: #fccc4c;
+        color: #fff;
+      }
+    }
+    .slick-prev {
+      left: -110px;
+      opacity: 0;
+      visibility: hidden;
+      &::before {
+        content: "\f060";
+        color: #000;
+        font-size: 15px;
+        font-weight: 900;
+        font-family: "FontAwesome";
+      }
+    }
+    .slick-next {
+      right: -110px;
+      opacity: 0;
+      visibility: hidden;
+      &::before {
+        content: "\f061";
+        color: #000;
+        font-size: 15px;
+        font-weight: 900;
+        font-style: normal;
+        font-family: "FontAwesome";
+      }
+    }
+    .text-center {
+      text-align: center;
+    }
+    .section-title {
+      margin-bottom: 50px;
+      .primary {
+      }
+      .title {
+      }
+      .subtitle {
+        margin: auto;
+      }
+    }
+    .customer {
+      width: 100%;
+      display: inline-block;
+      .customer-item {
+        .customer-thumb {
+          width: 100px;
+          margin: 0 auto -50px;
+          img {
+            border-radius: 50%;
+            width: 100%;
+            height: auto;
+            display: block;
+            vertical-align: middle;
+          }
+        }
+        .customer-content {
+            margin: 0 10px;
+          background-color: #f9f9f9;
+          text-align: center;
+          padding: 70px 20px 20px;
+          transition: 0.3s;
+          border-radius: 8px;
+          box-shadow: 0 3px 12px 0 rgba(25, 31, 33, 0.1);
+          .flaticon-left-quote {
+            color: #fccc4c;
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+            transition: 0.3s;
+            &::before {
+              content: "\f103";
+              font-family: "Flaticon";
+              font-style: normal;
+            }
+          }
+          .subtitle {
+            font-size: 15px;
+            line-height: 28px;
+            margin-bottom: 15px;
+            color: #515151;
+          }
+          .name {
+            font-size: 18px;
+            margin-bottom: 5px;
+            line-height: 28px;
+            font-weight: 700;
+            color: #1d2228;
+          }
+          span {
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+            color: #9f9e9e;
+            font-family: var(--font-1);
+          }
+        }
+      }
+    }
+    &:hover .slick-arrow {
+      opacity: 1;
+      visibility: visible;
+    }
+    &:hover .slick-prev {
+      left: -80px;
+    }
+    &:hover .slick-next {
+      right: -80px;
+    }
+  }
+}

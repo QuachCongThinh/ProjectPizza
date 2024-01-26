@@ -1,0 +1,95 @@
+@import "../../style//all.scss";
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  position: relative;
+  .dark-overlay {
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+      transition: background-color 0.3s;
+    }
+  }
+  .dark-overlay-2 {
+    &::before {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+  .bg-center {
+    background-position: 50%;
+  }
+  .bg-parallax {
+    background-attachment: fixed;
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .section {
+    position: relative;
+    padding: 80px 0;
+    background-image: url("../../assets/cta.jpg");
+    .section-title {
+      margin-bottom: 50px;
+      text-align: center;
+      .title {
+        color: #fff !important;
+      }
+      .subtitle {
+        color: #fff !important;
+        margin: auto;
+      }
+    }
+    .btn-custom {
+      left: 50%;
+      transform: translateX(-50%);
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      position: relative;
+      background-color: #ed4e53;
+      line-height: 24px;
+      border: 0;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 30px;
+      transition: 0.3s;
+      text-transform: uppercase;
+      border-radius: 25px;
+      z-index: 1;
+      font-family: var(--font-1);
+      &:hover {
+        color: #fff;
+        outline: none;
+      }
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #da464a;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 25px;
+        z-index: -1;
+        transition: 0.3s;
+        transform-origin: center;
+        transform: scale(0);
+      }
+      &:hover::before {
+        transform: scale(1);
+      }
+    }
+  }
+}

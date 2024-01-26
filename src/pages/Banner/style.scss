@@ -1,0 +1,321 @@
+@import "../../style/all.scss";
+
+.banner {
+  .image-banner {
+    img {
+      z-index: -1;
+      max-width: 300px;
+      position: absolute;
+      top: 150px;
+      left: -100px;
+    }
+  }
+  .banner-inner {
+    overflow-x: hidden;
+    max-width: 100%;
+    min-height: 740px;
+    padding: 70px 0 70px;
+    .container {
+      width: 100%;
+      margin: auto;
+      .slick-arrow {
+        display: none !important;
+      }
+      .slick-next {
+        display: none !important;
+      }
+      .slick-prev {
+        display: none !important;
+      }
+      .list-product {
+        max-width: 1140px;
+        display: flex !important;
+        margin: auto;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        .leftBanner {
+          .text-product {
+            li {
+              list-style: none;
+              .title {
+                font-size: 62px;
+                line-height: 80px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                color: #1d2228;
+                font-family: var(--font-2);
+                font-weight: 700;
+              }
+              .subtitle {
+                font-size: 26px;
+                line-height: 32px;
+                font-weight: 700;
+                color: #1d2228;
+                margin: 0 0 20px;
+                font-family: var(--font-2);
+              }
+              .description {
+                max-width: 500px;
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 25px;
+                color: #848486;
+                font-family: var(--font-1);
+              }
+              .banner-icon-wrapper {
+                display: flex;
+                li {
+                  .banner-icon {
+                    display: flex;
+                    .flaticon-calories {
+                      margin-right: 20px;
+                      font-size: 40px;
+                      &::before {
+                        content: "\f12e";
+                        font-family: "Flaticon";
+                        font-style: normal;
+                      }
+                    }
+                    .flaticon-cheese {
+                      margin-right: 20px;
+                      font-size: 40px;
+                      &::before {
+                        content: "\f12c";
+                        font-family: "Flaticon";
+                        font-style: normal;
+                      }
+                    }
+                    .banner-icon-body {
+                      margin: 0 30px 40px 0px;
+                      .value {
+                        font-size: 18px;
+                        font-weight: 700;
+                      }
+                      .text {
+                        font-family: var(--font-1);
+                        color: #515151;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .banner-control {
+            display: flex;
+            align-items: center;
+            .btn-custom {
+              text-decoration: none;
+              font-family: var(--font-1);
+              cursor: pointer;
+              display: inline-block;
+              text-align: center;
+              white-space: nowrap;
+              vertical-align: middle;
+              position: relative;
+              background-color: #ed4e53;
+              line-height: 24px;
+              border: 0;
+              color: #fff;
+              font-size: 14px;
+              font-weight: 600;
+              padding: 12px 30px;
+              transition: 0.3s;
+              text-transform: uppercase;
+              border-radius: 25px;
+              z-index: 1;
+              box-shadow: 4px 3px 24px rgba(237, 78, 83, 0.5);
+              .primary {
+                background-color: #ed4e53;
+                box-shadow: 4px 3px 24px rgba(237, 78, 83, 0.5);
+              }
+              &:hover {
+                color: #fff;
+                outline: none;
+              }
+              &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: #da464a;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 25px;
+                z-index: -1;
+                transition: 0.3s;
+                transform-origin: center;
+                transform: scale(0);
+              }
+              &:hover::before {
+                transform: scale(1);
+              }
+            }
+            .flaticon-shopping-bag {
+              color: #fff;
+              font-weight: 700;
+              margin-left: 10px;
+              transition: 0.3s;
+              &::before {
+                content: "\f112";
+                font-family: "Flaticon";
+                font-style: normal;
+              }
+            }
+            .price {
+              margin-left: 40px;
+              font-size: 26px;
+              font-weight: 700;
+              font-family: var(--font-2);
+              color: #1d2228;
+            }
+          }
+        }
+        .rightBanner {
+          img {
+            max-width: 100%;
+            width: 540px;
+            top: -82px;
+            right: 60%;
+          }
+        }
+      }
+    }
+  }
+}
+.banner-slider-nav {
+  margin-bottom: 80px;
+  .container {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    .slick-arrow {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid #f9f9f9;
+      color: #1d2228;
+      background-color: #f9f9f9;
+      transition: 0.3s;
+      z-index: 1;
+      overflow: hidden;
+      &:hover {
+        background-color: #fccc4c;
+        border-color: #fccc4c;
+        color: #fff;
+      }
+    }
+    .slick-prev {
+      left: -110px;
+      opacity: 0;
+      visibility: hidden;
+      &::before {
+        content: "\f060";
+        color: #000;
+        font-size: 15px;
+        font-weight: 900;
+        font-family: "FontAwesome";
+      }
+    }
+    .slick-next {
+      right: -110px;
+      opacity: 0;
+      visibility: hidden;
+      &::before {
+        content: "\f061";
+        color: #000;
+        font-size: 15px;
+        font-weight: 900;
+        font-style: normal;
+        font-family: "FontAwesome";
+      }
+    }
+    .banner-nav-item {
+      width: 100%;
+      display: inline-block;
+      padding: 0 15px;
+      .banner-nav-item-inner {
+        display: flex;
+        align-items: center;
+        padding: 20px 20px;
+        position: relative;
+        background-color: #f9f9f9;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 8px;
+        box-shadow: 0 3px 12px 0 rgba(25, 31, 33, 0.1);
+        overflow: hidden;
+        list-style: none;
+        img {
+          max-width: 150px;
+          margin-right: 15px;
+          transition: 0.3s;
+          display: block;
+        }
+        &:hover img {
+          transform: rotate(25deg);
+        }
+        .banner-nav-item-body {
+          flex: 1 1;
+          .name {
+            transition: 0.3s;
+            font-size: 18px;
+            font-family: var(--font-2);
+            font-weight: 700;
+            line-height: 28px;
+          }
+          .price-item {
+            font-weight: 600;
+            transition: 0.3s;
+            color: #515151;
+            font-size: 15px;
+            font-family: var(--font-1);
+          }
+          .discount {
+            text-decoration: line-through;
+            font-weight: 600;
+            transition: 0.3s;
+            color: #b9b9b9;
+            font-size: 15px;
+            font-family: var(--font-1);
+            margin-left: 10px;
+            display: flex;
+          }
+          .sale {
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            text-align: center;
+            .sale-inner {
+              transform: rotate(45deg);
+              background-color: #4e4e4e;
+              font-family: var(--font-1);
+              padding: 0 30px;
+              color: #fff;
+              font-weight: 600;
+            }
+          }
+        }
+        &:hover {
+          background-color: #fff2d1;
+        }
+      }
+    }
+  }
+  &:hover .slick-arrow {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:hover .slick-prev {
+    left: -90px;
+  }
+  &:hover .slick-next {
+    right: -90px;
+  }
+}

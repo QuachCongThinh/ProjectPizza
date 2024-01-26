@@ -1,0 +1,47 @@
+.headerContact {
+  background-color: #1d2228;
+  font-family: var(--font-1);
+  .container {
+    .top-container {
+      max-width: 1140px;
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+      .left {
+        padding: 15px 0;
+        p {
+          transition: all 0.3s;
+          cursor: pointer;
+          font-size: 12px;
+          font-weight: 700;
+          color: #fff;
+          &::before {
+            content: "\f095";
+            padding: 0 10px 0 0;
+            font-family: "FontAwesome";
+          }
+          &:hover {
+            color: #ed4e53;
+          }
+        }
+      }
+      .right {
+        cursor: pointer;
+        background-color: #ed4e53;
+        transition: all 0.3s;
+        p {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          padding: 0 10px;
+          font-size: 12px;
+          font-weight: 700;
+          color: #fff;
+        }
+        &:hover {
+          background-color: #da464a;
+        }
+      }
+    }
+  }
+}
