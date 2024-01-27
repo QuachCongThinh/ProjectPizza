@@ -4,7 +4,7 @@ import Styled from "styled-components";
 function BackToTop() {
   const [showTopBtn, setShowTopBtn] = useState(false);
   const checkScroll = () => {
-    let height = 200;
+    let height = 500;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
     winScroll > height ? setShowTopBtn(true) : setShowTopBtn(false);
@@ -28,25 +28,33 @@ function BackToTop() {
     </ButtonScrollToTop>
   );
 }
+
 const ButtonScrollToTop = Styled.section`
   display: flex;
   justify-content: flex-end;
   align-items: center;
   .btn-toTop{
-    position: absolute;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     background-color: #ddd;
-    transition: 0.3s;
-    margin-left: auto;
-    margin-right: 20px;
-    display: flex; 
+    border-radius: 50%;
+    position: fixed;
+    bottom: 40px;
+    right: -5px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 120px;
+    margin-left: auto;
+    margin-right: 20px;
+    z-index: 1000;
     cursor: pointer;
-    &:hover{
+    animation: fadeIn 0.3s;
+    opacity: 1;
+    transition: all 0.3s;
+    z-index: 1;
+    display: ${({ isScrollButtonVisible }) =>
+      isScrollButtonVisible ? "flex" : "none"};
+    &:hover {
+      opacity: 1;
       background-color: #fccc4c;
       color: #fff;
     }

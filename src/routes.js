@@ -1,26 +1,29 @@
 import { BrowserRouter as Route, Routes } from "react-router-dom";
 import { ROUTERS } from "./routes/router";
-import Home from "./pages/home";
+import ContactUs from "./components/Contact";
+import MasterLayout from "./pages/masterLayout";
 
-const renderUserRouter = () => {
+const renderRouter = () => {
   const userRouters = [
     {
-      path: ROUTERS.USER.HOME,
-      component: <Home />,
+      path: ROUTERS.USER.CONTACT,
+      component: <ContactUs />,
     },
   ];
 
   return (
-    <Routes>
-      {userRouters.map((item, key) => (
-        <Route key={key} path={item.path} element={item.component} />
-      ))}
-    </Routes>
+    <MasterLayout>
+      <Routes>
+        {userRouters.map((item, key) => (
+          <Route key={key} path={item.path} element={item.component} />
+        ))}
+      </Routes>
+    </MasterLayout>
   );
 };
 
 const RouterCustom = () => {
-  return renderUserRouter();
+  return renderRouter();
 };
 
 export default RouterCustom;
