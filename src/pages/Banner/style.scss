@@ -277,6 +277,7 @@
             color: #515151;
             font-size: 15px;
             font-family: var(--font-1);
+            display: inline-block;
           }
           .discount {
             text-decoration: line-through;
@@ -285,8 +286,9 @@
             color: #b9b9b9;
             font-size: 15px;
             font-family: var(--font-1);
-            margin-left: 10px;
-            display: flex;
+            float: right;
+            clear: both;
+            margin-right: 60px;
           }
           .sale {
             position: absolute;

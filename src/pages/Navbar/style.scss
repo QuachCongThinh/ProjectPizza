@@ -1,4 +1,9 @@
+@import "../../style/all.scss";
+
 .navbar {
+  .cart-sidebar-open {
+    right: 0;
+  }
   .container-navbar {
     max-width: 1140px;
     margin: auto;

@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 function BannerSlider() {
   const sliderItem = {
+    autoplay: true,
+    autoplaySpeed: 4000,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -18,8 +20,8 @@ function BannerSlider() {
       <div className="container">
         <Slider {...sliderItem}>
           {ListProduct.map((list, listKey) => (
-            <div>
-              <div className="banner-nav-item" key={listKey}>
+            <div key={listKey}>
+              <div className="banner-nav-item">
                 <div className="banner-nav-item-inner">
                   <img src={list.imageUrl} alt="Product" />
                   <div className="banner-nav-item-body">

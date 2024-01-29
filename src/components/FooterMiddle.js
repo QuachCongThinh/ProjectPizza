@@ -9,10 +9,10 @@ export function FooterMiddle() {
     <div className="footer-middle">
       <div className="footer-row">
         {Information.map((InforItem, InforKey) => (
-          <>
+          <div key={InforKey}>
             <div className="row-item">
               <h5 className="title">{InforItem.title}</h5>
-              <ul key={InforKey}>
+              <ul>
                 {InforItem.menu?.map((menuItem, menuKey) => (
                   <li key={menuKey}>
                     <a href={menuItem.path}>{menuItem.name}</a>
@@ -20,13 +20,13 @@ export function FooterMiddle() {
                 ))}
               </ul>
             </div>
-          </>
+          </div>
         ))}
         {TopItems.map((TopItem, TopItemKey) => (
-          <>
+          <div key={TopItemKey}>
             <div className="row-item">
               <h5 className="title">{TopItem.title}</h5>
-              <ul key={TopItemKey}>
+              <ul>
                 {TopItem.menu?.map((menuItem, menuKey) => (
                   <li key={menuKey}>
                     <a href={menuItem.path}>{menuItem.name}</a>
@@ -34,13 +34,13 @@ export function FooterMiddle() {
                 ))}
               </ul>
             </div>
-          </>
+          </div>
         ))}
         {Other.map((OtherItem, OtherKey) => (
-          <>
+          <div key={OtherKey}>
             <div className="row-item">
               <h5 className="title">{OtherItem.title}</h5>
-              <ul key={OtherKey}>
+              <ul>
                 {OtherItem.menu?.map((menuItem, menuKey) => (
                   <li key={menuKey}>
                     <a href={menuItem.path}>{menuItem.name}</a>
@@ -48,31 +48,31 @@ export function FooterMiddle() {
                 ))}
               </ul>
             </div>
-          </>
+          </div>
         ))}
-        {Social.map((SocialItem) => (
-          <>
+        {Social.map((SocialItem, SocialItemKey) => (
+          <div key={SocialItemKey}>
             <div className="row-item">
               <h5 className="title">{SocialItem.title}</h5>
               <ul className="social-media">
                 <li>
                   <a href="/" className="facebook">
-                    <i class="fab fa-facebook-f"></i>
+                    <i className="fab fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
                   <a href="/" className="pinterest">
-                    <i class="fab fa-pinterest-p"></i>
+                    <i className="fab fa-pinterest-p"></i>
                   </a>
                 </li>
                 <li>
                   <a href="/" className="google">
-                    <i class="fab fa-google"></i>
+                    <i className="fab fa-google"></i>
                   </a>
                 </li>
                 <li>
                   <a href="/" className="twitter">
-                    <i class="fab fa-twitter"></i>
+                    <i className="fab fa-twitter"></i>
                   </a>
                 </li>
               </ul>
@@ -83,7 +83,7 @@ export function FooterMiddle() {
                 </a>
               </div>
             </div>
-          </>
+          </div>
         ))}
       </div>
     </div>

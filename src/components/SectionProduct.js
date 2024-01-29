@@ -13,16 +13,16 @@ export function SectionProductHeader() {
   };
   return (
     <div className="container">
-      {ProductSection.map((product) => (
-        <>
+      {ProductSection.map((product, productKey) => (
+        <div key={productKey}>
           <div className="section-title">
             <h5 className="primary">{product.primary}</h5>
             <h2 className="title">{product.title}</h2>
             <p className="subtitle">{product.subtitle}</p>
           </div>
           <Slider {...settingsProduct}>
-            {product.product.map((item) => (
-              <div className="product">
+            {product.product.map((item, itemKey) => (
+              <div className="product" key={itemKey}>
                 <a href="/" className="product-thumb">
                   <img src={item.imageUrl} alt="Bg" />
                 </a>
@@ -32,22 +32,22 @@ export function SectionProductHeader() {
                     <p className="description">{item.description}</p>
                     <p className="price">{item.price}</p>
                     <div className="favorite">
-                      <i class="far fa-heart"></i>
+                      <i className="far fa-heart"></i>
                     </div>
                   </div>
                   <div className="product-control">
                     <a href="/" className="btn-order">
-                      Order <i class="fas fa-shopping-cart"></i>
+                      Order <i className="fas fa-shopping-cart"></i>
                     </a>
                     <a href="/" className="btn-custom">
-                      Customize <i class="fas fa-plus"></i>
+                      Customize <i className="fas fa-plus"></i>
                     </a>
                   </div>
                 </div>
               </div>
             ))}
           </Slider>
-        </>
+        </div>
       ))}
     </div>
   );

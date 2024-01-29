@@ -84,6 +84,7 @@ function Navbar() {
       path: "",
     },
   ]);
+
   return (
     <div className="navbar">
       <div className="container-navbar">

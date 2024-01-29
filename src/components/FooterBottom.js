@@ -6,8 +6,8 @@ export function FooterBottom() {
     <div className="footer-bottom">
       <div className="container">
         <div className="footer-copyright">
-          {ValueBottom.map((item) => (
-            <p>
+          {ValueBottom.map((item, itemKey) => (
+            <p key={itemKey}>
               {item.copyright}
               <a href="/">{item.theme}</a>
               {item.reserved}

@@ -14,16 +14,16 @@ export function SectionCustomers() {
   };
   return (
     <div className="container">
-      {Testimonials.map((item) => (
-        <>
+      {Testimonials.map((item, itemKey) => (
+        <div key={itemKey}>
           <div className="section-title text-center">
             <h5 className="primary">{item.primary}</h5>
             <h2 className="title">{item.title}</h2>
             <p className="subtitle">{item.subtitle}</p>
           </div>
           <Slider {...settingsCustomer}>
-            {item.customer.map((item) => (
-              <div className="customer">
+            {item.customer.map((item, itemKey) => (
+              <div className="customer" key={itemKey}>
                 <div className="customer-item">
                   <div className="customer-thumb">
                     <img src={item.imageUrl} alt="imgCustomer" />
@@ -38,7 +38,7 @@ export function SectionCustomers() {
               </div>
             ))}
           </Slider>
-        </>
+        </div>
       ))}
     </div>
   );

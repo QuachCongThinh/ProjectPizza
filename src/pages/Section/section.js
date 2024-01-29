@@ -1,4 +1,4 @@
-import "../Section/style.scss";
+import "./style.scss";
 import { mockSection as SectionIntro } from "../../data/SectionIntro";
 
 function Section() {
