@@ -1,9 +1,19 @@
-import { BrowserRouter as Route, Routes } from "react-router-dom";
-import { ROUTERS } from "./routes/router";
+import { ROUTERS } from "./utils/route";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./components/homepage";
+import Location from "./components/Location";
 import ContactUs from "./components/Contact";
 
-const renderRouter = () => {
+const RenderRouter = () => {
   const Routers = [
+    {
+      path: ROUTERS.HOME,
+      component: <HomePage />,
+    },
+    {
+      path: ROUTERS.LOCATION,
+      component: <Location />,
+    },
     {
       path: ROUTERS.CONTACT,
       component: <ContactUs />,
@@ -19,8 +29,4 @@ const renderRouter = () => {
   );
 };
 
-const RouterCustom = () => {
-  return renderRouter();
-};
-
-export default RouterCustom;
+export default RenderRouter;

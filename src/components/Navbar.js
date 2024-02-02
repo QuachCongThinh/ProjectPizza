@@ -2,12 +2,14 @@ import Logo from "../assets/LogoPizza.png";
 import "../pages/Navbar/style.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ROUTERS } from "../utils/route";
+import { MenuCart } from "./MenuCart";
 
 function Navbar() {
   const [menus] = useState([
     {
       name: "Home",
-      path: "",
+      path: ROUTERS.HOME,
     },
     {
       name: "Blog",
@@ -77,13 +79,21 @@ function Navbar() {
     },
     {
       name: "Locations",
-      path: "",
+      path: ROUTERS.LOCATION,
     },
     {
       name: "Contact Us",
-      path: "",
+      path: ROUTERS.CONTACT,
     },
   ]);
+  const [isMenuShow, setIsMenuShow] = useState(false);
+  const handleClick = () => {
+    // console.log("handleClick");
+    setIsMenuShow(true);
+  };
+  const handleClose = (isClose) => {
+    setIsMenuShow(isClose);
+  };
 
   return (
     <div className="navbar">
@@ -128,7 +138,7 @@ function Navbar() {
           </ul>
         </div>
         <div className="rightSide">
-          <div className="icon-cart">
+          <div className="icon-cart" onClick={handleClick}>
             <i className="flaticon-shopping-bag"></i>
             <span className="cart-item-count">
               <p>0</p>
@@ -139,6 +149,8 @@ function Navbar() {
           </div>
         </div>
       </div>
+      <MenuCart isMenuShow={isMenuShow} handleClose={handleClose} />
+      {/* {isMenuShow &&  />} */}
     </div>
   );
 }

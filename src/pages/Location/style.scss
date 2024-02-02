@@ -1,0 +1,35 @@
+@import "../../style/all.scss";
+
+.section {
+  .location-title {
+  }
+  .container-location {
+    .location-item {
+      .row {
+        display: flex;
+        .row-left {
+          img {
+          }
+          .location-desc {
+          }
+          .location-info {
+            .row-info {
+            }
+            .row-contact {
+            }
+          }
+        }
+        .row-right {
+          .map {
+            iframe {
+              position: absolute;
+              width: 100%;
+              height: auto;
+              background-color: darkgrey;
+            }
+          }
+        }
+      }
+    }
+  }
+}
