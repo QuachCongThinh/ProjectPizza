@@ -1,34 +1,111 @@
 @import "../../style/all.scss";
 
 .section {
+  max-width: 1140px;
+  margin: auto;
   .location-title {
+    margin: 30px 0;
+    h1 {
+      font-size: 50px;
+      line-height: 58px;
+      font-weight: 700;
+    }
+    p {
+      font-family: var(--font-1);
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
   }
   .container-location {
     .location-item {
+      position: relative;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       .row {
         display: flex;
+        align-items: center;
         .row-left {
           img {
-          }
-          .location-desc {
-          }
-          .location-info {
-            .row-info {
-            }
-            .row-contact {
-            }
+            margin-bottom: 15px;
+            border-radius: 8px;
+            max-width: 100%;
+            width: 547px;
+            height: auto;
+            vertical-align: middle;
           }
         }
         .row-right {
-          .map {
-            iframe {
-              position: absolute;
-              width: 100%;
-              height: auto;
-              background-color: darkgrey;
+          margin-left: 100px;
+          .location-desc {
+            text-align: center;
+            h3 {
+              font-size: 35px;
+              line-height: 43px;
+              margin-bottom: 15px;
+              font-weight: 700;
+              color: #1d2228;
+            }
+            p {
+              font-family: var(--font-1);
+              font-size: 15px;
+              font-weight: 600;
+              line-height: 18px;
+              margin-bottom: 15px;
+              color: #515151;
+            }
+          }
+          .location-info {
+            .row-info {
+              display: inline-block;
+              p {
+                margin-bottom: 10px;
+                font-family: var(--font-1);
+                font-size: 15px;
+                color: #515151;
+              }
+            }
+            .row-contact {
+              float: right;
+              margin-left: 100px;
+              p {
+                font-family: var(--font-1);
+                font-size: 15px;
+                color: #515151;
+              }
+              a {
+                font-family: var(--font-1);
+                font-size: 15px;
+                color: #ed4e53;
+                text-decoration: none;
+              }
             }
           }
         }
+      }
+      &::before {
+        content: "\f130";
+        font-family: flaticon;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 40px;
+        height: 20px;
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(0, 0, 0, 0.1);
+        padding: 0 5px;
+        background-color: #fff;
+        transform: translateX(-50%);
+      }
+      &:last-child::before {
+        display: none;
+      }
+      &:last-child {
+        border-bottom: none;
       }
     }
   }
