@@ -53,11 +53,11 @@ function Navbar() {
         },
         {
           name: "Login",
-          path: "",
+          path: ROUTERS.LOGIN,
         },
         {
           name: "Sign Up",
-          path: "",
+          path: ROUTERS.SIGNUP,
         },
         {
           name: "Checkout",
@@ -88,11 +88,10 @@ function Navbar() {
   ]);
   const [isMenuShow, setIsMenuShow] = useState(false);
   const handleClick = () => {
-    // console.log("handleClick");
     setIsMenuShow(true);
   };
-  const handleClose = (isClose) => {
-    setIsMenuShow(isClose);
+  const handleClose = () => {
+    setIsMenuShow(false);
   };
 
   return (
@@ -150,7 +149,6 @@ function Navbar() {
         </div>
       </div>
       <MenuCart isMenuShow={isMenuShow} handleClose={handleClose} />
-      {/* {isMenuShow &&  />} */}
     </div>
   );
 }

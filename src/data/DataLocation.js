@@ -1,7 +1,6 @@
 export const mockLocationData = [
   {
     title: "Locations",
-    url: "Home / Locations",
     item: [
       {
         imageUrl:

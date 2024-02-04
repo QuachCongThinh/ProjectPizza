@@ -4,13 +4,14 @@ import { mockLocationData as DataLocation } from "../data/DataLocation";
 
 function Location() {
   return (
-    <div>
+    <>
       <div className="section">
         {DataLocation.map((item) => (
           <>
-            <div className="location-title">
-              <h1>{item.title}</h1>
-              <p>{item.url}</p>
+            <div className="subheader dark-overlay dark-overlay-2">
+              <div className="location-title">
+                <h1>{item.title}</h1>
+              </div>
             </div>
             <div className="container-location">
               {item.item && (
@@ -49,7 +50,7 @@ function Location() {
           </>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 export default Location;

@@ -22,6 +22,7 @@ function Banner() {
           src="https://androthemes.com/themes/react/slices/assets/img/veg/11.png"
           alt="Bg"
         />
+
       </div>
       <div className="banner-inner">
         <div className="container">

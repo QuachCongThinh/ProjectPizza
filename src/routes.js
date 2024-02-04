@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/homepage";
 import Location from "./components/Location";
 import ContactUs from "./components/Contact";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 
 const RenderRouter = () => {
   const Routers = [
@@ -17,6 +19,14 @@ const RenderRouter = () => {
     {
       path: ROUTERS.CONTACT,
       component: <ContactUs />,
+    },
+    {
+      path: ROUTERS.LOGIN,
+      component: <Login />,
+    },
+    {
+      path: ROUTERS.SIGNUP,
+      component: <SignUp />,
     },
   ];
 

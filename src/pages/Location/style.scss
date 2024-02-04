@@ -1,23 +1,47 @@
 @import "../../style/all.scss";
 
 .section {
-  max-width: 1140px;
-  margin: auto;
-  .location-title {
-    margin: 30px 0;
-    h1 {
-      font-size: 50px;
-      line-height: 58px;
-      font-weight: 700;
+  .dark-overlay {
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+      transition: background-color 0.3s;
     }
-    p {
-      font-family: var(--font-1);
-      font-size: 15px;
-      font-weight: 600;
-      cursor: pointer;
+  }
+  .dark-overlay-2::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .subheader {
+    background-image: url("http://androthemes.com/themes/react/slices/assets/img/subheader.jpg");
+    background-size: cover;
+    background-position: 50%;
+    min-height: 500px;
+    padding: 220px 0 40px;
+    margin-bottom: 80px;
+    .location-title {
+      max-width: 1140px;
+      margin: auto;
+      text-align: center;
+      h1 {
+        font-size: 50px;
+        line-height: 58px;
+        font-weight: 700;
+        color: #fff;
+      }
     }
   }
   .container-location {
+    max-width: 1140px;
+    margin: auto;
     .location-item {
       position: relative;
       margin-bottom: 40px;
