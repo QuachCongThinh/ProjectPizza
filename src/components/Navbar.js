@@ -146,6 +146,11 @@ function Navbar() {
           <div className="icon-search">
             <i className="flaticon-search"></i>
           </div>
+          <div className="aside-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
       <MenuCart isMenuShow={isMenuShow} handleClose={handleClose} />

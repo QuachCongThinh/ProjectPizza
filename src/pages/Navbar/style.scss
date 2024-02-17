@@ -1,4 +1,5 @@
 @import "../../style/all.scss";
+@import "../../style/responsive.scss";
 
 .navbar {
   .container-navbar {
@@ -7,11 +8,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    animation: left 0.5s;
+    @keyframes left {
+      to {
+        left: -1200px;
+      }
+      from {
+        left: 0;
+      }
+    }
     .leftSide {
       img {
         max-width: 100%;
         width: 100px;
         height: auto;
+        @include Responsive($WIDE_DEVICE) {
+          margin-left: 10px;
+        }
       }
     }
     .centerSide {
@@ -112,14 +126,21 @@
           }
         }
       }
+      @include Responsive($WIDE_DEVICE) {
+        display: none;
+      }
     }
     .rightSide {
       display: flex;
+      align-items: center;
       .icon-cart {
         padding: 0 30px;
         cursor: pointer;
         position: relative;
         transition: 0.3s;
+        @include Responsive($WIDE_DEVICE) {
+          padding: 0 20px;
+        }
         .flaticon-shopping-bag {
           &::before {
             content: "\f112";
@@ -139,6 +160,10 @@
           top: -12px;
           left: 42px;
           border-radius: 50%;
+          @include Responsive($WIDE_DEVICE) {
+            top: -8px;
+            left: 32px;
+          }
           p {
             color: #fff;
             text-align: center;
@@ -162,6 +187,43 @@
           }
         }
         &:hover {
+          color: #ed4e53;
+        }
+      }
+    }
+    @include Responsive($DESKTOP) {
+      .aside-toggle {
+        display: none;
+      }
+    }
+    @include Responsive($WIDE_DEVICE) {
+      .aside-toggle {
+        margin: 0 20px;
+        cursor: pointer;
+        span {
+          display: block;
+          margin-bottom: 6px;
+          height: 1px;
+          width: 25px;
+          border-radius: 3px;
+          background-color: #1d2228;
+          transition: 0.3s;
+          &:first-child {
+            width: 15px;
+            height: 1px;
+            margin-right: auto;
+            margin-top: 0;
+          }
+          &:last-child {
+            height: 1px;
+
+            margin-left: auto;
+            margin-bottom: 0;
+            width: 15px;
+          }
+        }
+        &:hover span {
+          background-color: #ed4e53;
           color: #ed4e53;
         }
       }

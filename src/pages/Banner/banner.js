@@ -22,13 +22,12 @@ function Banner() {
           src="https://androthemes.com/themes/react/slices/assets/img/veg/11.png"
           alt="Bg"
         />
-
       </div>
       <div className="banner-inner">
         <div className="container">
           <Slider {...sliderBanner}>
             {ProductBanner.map((item, itemKey) => (
-              <div key={itemKey} className="list-product">
+              <div key={itemKey} className="list-product row">
                 <div className="leftBanner">
                   <ul className="text-product">
                     <li>

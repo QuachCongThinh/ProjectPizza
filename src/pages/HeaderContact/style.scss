@@ -1,3 +1,6 @@
+@import "../../style/all.scss";
+@import "../../style/responsive.scss";
+
 .headerContact {
   background-color: #1d2228;
   font-family: var(--font-1);
@@ -7,6 +10,14 @@
       display: flex;
       margin: auto;
       justify-content: space-between;
+
+      @include Responsive($WIDE_DEVICE) {
+        padding: 0 15px;
+      }
+      @include Responsive($SMALL_DEVICE) {
+        padding: 0 15px;
+      }
+
       .left {
         padding: 15px 0;
         p {
