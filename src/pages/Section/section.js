@@ -1,5 +1,5 @@
 import "./style.scss";
-import { mockSection as SectionIntro } from "../../data/SectionIntro";
+import { mockSection as SectionIntro } from "../../data/HomePage/SectionIntro";
 
 function Section() {
   return (

@@ -1,5 +1,5 @@
 import "../pages/Product/style.scss";
-import { mockProductContainer as ProductSection } from "../data/ProductSection";
+import { mockProductContainer as ProductSection } from "../data/HomePage/ProductSection";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

@@ -1,8 +1,8 @@
 import React from "react";
 import "../pages/Contact/style.scss";
 import BannerContact from "../assets/imgContact.jpg";
-import { mockContactInfo as InfoContact } from "../data/InfoContact";
-import { mockFormContact as FormContact } from "../data/FormContact";
+import { mockContactInfo as InfoContact } from "../data/Contact/InfoContact";
+import { mockFormContact as FormContact } from "../data/Contact/FormContact";
 
 function ContactUs() {
   return (

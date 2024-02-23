@@ -4,7 +4,7 @@ import { mockInfoLogin as InfoLogin } from "../data/InfoLogin";
 
 function Login() {
   return (
-    <div className="section">
+    <div className="login">
       <div className="img-wrapper">
         <img
           src="https://androthemes.com/themes/react/slices/assets/img/veg/11.png"

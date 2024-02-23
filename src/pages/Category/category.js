@@ -1,5 +1,5 @@
 import React from "react";
-import { mockListCategories as Categories } from "../../data/Categories";
+import { mockListCategories as Categories } from "../../data/HomePage/Categories";
 import "./style.scss";
 
 function Category() {

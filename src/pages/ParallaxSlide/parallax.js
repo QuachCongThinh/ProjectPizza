@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import { mockParallax as ParallaxSlide } from "../../data/ParallaxSlide";
+import { mockParallax as ParallaxSlide } from "../../data/HomePage/ParallaxSlide";
 
 function ParallaxComponent() {
   return (

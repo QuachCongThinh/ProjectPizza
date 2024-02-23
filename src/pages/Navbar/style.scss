@@ -8,16 +8,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    animation: left 0.5s;
-    @keyframes left {
-      to {
-        left: -1200px;
-      }
-      from {
-        left: 0;
-      }
-    }
     .leftSide {
       img {
         max-width: 100%;

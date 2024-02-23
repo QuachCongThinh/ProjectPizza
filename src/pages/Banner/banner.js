@@ -1,6 +1,6 @@
 import "./style.scss";
 import React from "react";
-import { mockProductBanner as ProductBanner } from "../../data/ProductBanner";
+import { mockProductBanner as ProductBanner } from "../../data/HomePage/ProductBanner";
 import BannerSlider from "../../components/BannerSlider";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

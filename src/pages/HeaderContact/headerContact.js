@@ -1,6 +1,6 @@
 import "./style.scss";
 import "../../style/responsive.scss";
-import { mockHeaderDetails as DetailHeader } from "../../data/DetailHeader";
+import { mockHeaderDetails as DetailHeader } from "../../data/HomePage/DetailHeader";
 
 function HeaderContact() {
   return (

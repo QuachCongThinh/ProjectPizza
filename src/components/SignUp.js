@@ -1,9 +1,10 @@
 import React from "react";
+import "../pages/SignUp/style.scss";
 import { mockInfoSignUp as InfoSignUp } from "../data/InfoSignUp";
 
 function SignUp() {
   return (
-    <div className="section">
+    <div className="signUp">
       <div className="img-wrapper">
         <img
           src="https://androthemes.com/themes/react/slices/assets/img/veg/11.png"

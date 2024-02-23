@@ -1,16 +1,21 @@
 import { ROUTERS } from "./utils/route";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./components/homepage";
+import HomePage from "./components/Homepages";
 import Location from "./components/Location";
 import ContactUs from "./components/Contact";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import About from "./pages/AboutUs";
 
 const RenderRouter = () => {
   const Routers = [
     {
       path: ROUTERS.HOME,
       component: <HomePage />,
+    },
+    {
+      path: ROUTERS.ABOUT,
+      component: <About />,
     },
     {
       path: ROUTERS.LOCATION,

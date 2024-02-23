@@ -1,6 +1,6 @@
 import "../style/all.scss";
 import "../pages/SectionCustomer/style.scss";
-import { mockListTestimonials as Testimonials } from "../data/Testimonials";
+import { mockListTestimonials as Testimonials } from "../data/HomePage/Testimonials";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

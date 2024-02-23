@@ -1,6 +1,7 @@
 @import "../../style/all.scss";
+@import "../../style/responsive.scss";
 
-.section {
+.location {
   .dark-overlay {
     position: relative;
     z-index: 1;
@@ -79,6 +80,9 @@
               margin-bottom: 15px;
               color: #515151;
             }
+            @include Responsive($WIDE_DEVICE) {
+              text-align: left;
+            }
           }
           .location-info {
             .row-info {
@@ -106,6 +110,13 @@
               }
             }
           }
+          @include Responsive($WIDE_DEVICE) {
+            margin-left: 0;
+          }
+        }
+        @include Responsive($WIDE_DEVICE) {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
         }
       }
       &::before {

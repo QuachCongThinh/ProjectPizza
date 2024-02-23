@@ -49,7 +49,7 @@ function Navbar() {
       child: [
         {
           name: "About Us",
-          path: "",
+          path: ROUTERS.ABOUT,
         },
         {
           name: "Login",
@@ -88,10 +88,10 @@ function Navbar() {
   ]);
   const [isMenuShow, setIsMenuShow] = useState(false);
   const handleClick = () => {
-    setIsMenuShow(true);
+    setIsMenuShow(!isMenuShow);
   };
   const handleClose = () => {
-    setIsMenuShow(false);
+    setIsMenuShow(!isMenuShow);
   };
 
   return (
