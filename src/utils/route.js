@@ -5,4 +5,5 @@ export const ROUTERS = {
   CONTACT: "/contact",
   LOGIN: "/login",
   SIGNUP: "/signup",
+  ERROR: "/error",
 };

@@ -1,6 +1,6 @@
-import "../pages/Footer/style.scss";
-import Logo from "../assets/LogoPizza.png";
-import { mockTopFooter as Top } from "../data/Footer/ValueTop";
+import "../../pages/Footer/style.scss";
+import Logo from "../../assets/LogoPizza.png";
+import { mockTopFooter as Top } from "../../data/Footer/ValueTop";
 
 export function FooterTop() {
   return (

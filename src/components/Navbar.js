@@ -13,7 +13,7 @@ function Navbar() {
     },
     {
       name: "Blog",
-      path: "",
+      path: "/",
       child: [
         {
           name: "Blog Archive",
@@ -45,7 +45,7 @@ function Navbar() {
     },
     {
       name: "Pages",
-      path: "",
+      path: "/",
       child: [
         {
           name: "About Us",
@@ -73,7 +73,7 @@ function Navbar() {
         },
         {
           name: "Error 404",
-          path: "",
+          path: ROUTERS.ERROR,
         },
       ],
     },
@@ -93,6 +93,18 @@ function Navbar() {
   const handleClose = () => {
     setIsMenuShow(!isMenuShow);
   };
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".list-menu");
+    navLinks.forEach(function (navLink) {
+      navLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        navLinks.forEach(function (link) {
+          link.classList.remove("active");
+        });
+        this.classList.add("active");
+      });
+    });
+  });
 
   return (
     <div className="navbar">

@@ -40,10 +40,17 @@ function Banner() {
                             {item.energy?.map((energyItem, energyKey) => (
                               <li key={energyKey}>
                                 <div className="banner-icon">
-                                  <i className="flaticon-calories"></i>
-                                  <i className="flaticon-cheese"></i>
+                                  <i
+                                    className={`${
+                                      energyItem.value1
+                                        ? "flaticon-calories"
+                                        : "flaticon-cheese"
+                                    }`}
+                                  ></i>
                                   <div className="banner-icon-body">
-                                    <p className="value">{energyItem.value}</p>
+                                    <p className="value">
+                                      {energyItem.value1} {energyItem.value2}
+                                    </p>
                                     <p className="text">{energyItem.text}</p>
                                   </div>
                                 </div>

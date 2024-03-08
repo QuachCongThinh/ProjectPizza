@@ -1,11 +1,12 @@
 import { ROUTERS } from "./utils/route";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./components/Homepages";
-import Location from "./components/Location";
-import ContactUs from "./components/Contact";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
-import About from "./pages/AboutUs";
+import Location from "./pages/Location/Location";
+import ContactUs from "./pages/Contact/Contact";
+import Login from "./pages/Login/Login";
+import SignUp from "./pages/SignUp/SignUp";
+import About from "./pages/AboutUs/AboutUs";
+import Error from "./pages/Error404/Error";
 
 const RenderRouter = () => {
   const Routers = [
@@ -32,6 +33,10 @@ const RenderRouter = () => {
     {
       path: ROUTERS.SIGNUP,
       component: <SignUp />,
+    },
+    {
+      path: ROUTERS.ERROR,
+      component: <Error />,
     },
   ];
 

@@ -6,11 +6,11 @@ export const mockProductBanner = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     energy: [
       {
-        value: "480",
+        value1: "480",
         text: "Calories",
       },
       {
-        value: "120g",
+        value2: "120g",
         text: "Mozarella",
       },
     ],
@@ -25,11 +25,11 @@ export const mockProductBanner = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     energy: [
       {
-        value: "800",
+        value1: "800",
         text: "Calories",
       },
       {
-        value: "300g",
+        value2: "300g",
         text: "Mozarella",
       },
     ],
@@ -44,11 +44,11 @@ export const mockProductBanner = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     energy: [
       {
-        value: "230",
+        value1: "230",
         text: "Calories",
       },
       {
-        value: "100g",
+        value2: "100g",
         text: "Mozarella",
       },
     ],
@@ -63,11 +63,11 @@ export const mockProductBanner = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard",
     energy: [
       {
-        value: "650",
+        value1: "650",
         text: "Calories",
       },
       {
-        value: "200g",
+        value2: "200g",
         text: "Mozarella",
       },
     ],

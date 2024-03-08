@@ -1,6 +1,6 @@
 import React from "react";
-import "../pages/Location/style.scss";
-import { mockLocationData as DataLocation } from "../data/Location/DataLocation";
+import "../../pages/Location/style.scss";
+import { mockLocationData as DataLocation } from "../../data/Location/DataLocation";
 
 function Location() {
   return (

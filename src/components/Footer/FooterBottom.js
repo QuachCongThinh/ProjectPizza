@@ -1,5 +1,5 @@
-import "../pages/Footer/style.scss";
-import { mockFooterBottom as ValueBottom } from "../data/Footer/ValueBottom";
+import "../../pages/Footer/style.scss";
+import { mockFooterBottom as ValueBottom } from "../../data/Footer/ValueBottom";
 
 export function FooterBottom() {
   return (

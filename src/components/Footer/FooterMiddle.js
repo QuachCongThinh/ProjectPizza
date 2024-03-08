@@ -1,8 +1,8 @@
-import "../pages/Footer/style.scss";
-import { mockInformationFooter as Information } from "../data/Footer/Information";
-import { mockTopItem as TopItems } from "../data/Footer/TopItems";
-import { mockOthers as Other } from "../data/Footer/Other";
-import { mockSocial as Social } from "../data/Footer/Social";
+import "../../pages/Footer/style.scss";
+import { mockInformationFooter as Information } from "../../data/Footer/Information";
+import { mockTopItem as TopItems } from "../../data/Footer/TopItems";
+import { mockOthers as Other } from "../../data/Footer/Other";
+import { mockSocial as Social } from "../../data/Footer/Social";
 
 export function FooterMiddle() {
   return (
