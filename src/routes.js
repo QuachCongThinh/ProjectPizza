@@ -7,6 +7,7 @@ import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import About from "./pages/AboutUs/AboutUs";
 import Error from "./pages/Error404/Error";
+import Legal from "./pages/Legal/Legal";
 
 const RenderRouter = () => {
   const Routers = [
@@ -37,6 +38,10 @@ const RenderRouter = () => {
     {
       path: ROUTERS.ERROR,
       component: <Error />,
+    },
+    {
+      path: ROUTERS.LEGAL,
+      component: <Legal />,
     },
   ];
 

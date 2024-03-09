@@ -119,9 +119,9 @@
           }
         }
       }
-      @include Responsive($WIDE_DEVICE) {
-        display: none;
-      }
+      // @include Responsive($WIDE_DEVICE) {
+      //   display: none;
+      // }
     }
     .rightSide {
       display: flex;

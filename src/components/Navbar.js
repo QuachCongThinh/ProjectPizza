@@ -69,7 +69,7 @@ function Navbar() {
         },
         {
           name: "Legal",
-          path: "",
+          path: ROUTERS.LEGAL,
         },
         {
           name: "Error 404",
@@ -93,18 +93,6 @@ function Navbar() {
   const handleClose = () => {
     setIsMenuShow(!isMenuShow);
   };
-  document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".list-menu");
-    navLinks.forEach(function (navLink) {
-      navLink.addEventListener("click", function (event) {
-        event.preventDefault();
-        navLinks.forEach(function (link) {
-          link.classList.remove("active");
-        });
-        this.classList.add("active");
-      });
-    });
-  });
 
   return (
     <div className="navbar">
